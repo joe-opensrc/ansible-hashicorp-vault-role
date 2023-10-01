@@ -1,0 +1,12 @@
+---
+
+- name: Bins¦ unpack / unzip the app
+  become: yes
+  ansible.builtin.unarchive:
+    owner: root
+    group: root
+    remote_src: true
+    src: "{{ vault_download_path }}/{{ vault_zip_name }}"
+    dest: "{{ vault_bin_path }}"
+    extra_opts: --strip-components=1
+
