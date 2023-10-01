@@ -1,5 +1,6 @@
 
 - name: Packages¦ install dependencies via package manager
+  become: yes
   register: apt_install
   ansible.builtin.apt:
     update_cache: yes
