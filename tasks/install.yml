@@ -8,5 +8,4 @@
     remote_src: true
     src: "{{ vault_download_path }}/{{ vault_zip_name }}"
     dest: "{{ vault_bin_path }}"
-    extra_opts: --strip-components=1
 
