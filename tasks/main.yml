@@ -1,5 +1,8 @@
 ---
 
+- include: instDeps.yml
+  tags: dependencies
+
 - include: download.yml
   tags: download
 
