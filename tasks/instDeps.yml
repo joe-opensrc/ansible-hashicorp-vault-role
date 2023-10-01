@@ -1,0 +1,9 @@
+---
+
+- include_tasks:
+    file: "instDeps/{{ ansible_facts['os_family'] | default('Suse') }}.yml"
+    apply:
+      tags: dependencies
+  tags: dependencies
+
+
