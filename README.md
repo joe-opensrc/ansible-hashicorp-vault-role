@@ -1,4 +1,4 @@
-Role Name
+Hashicorp Vault Installer Role
 =========
 
 Role to install hashicorp vault binary into:</br>
