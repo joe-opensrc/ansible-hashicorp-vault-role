@@ -1,0 +1,18 @@
+---
+namespace: "joe_opensrc"
+name: "hashicorp_vault"
+version: "1.0.0"
+description: "Hashicorp Vault Wrangler"
+license:
+  - "GPL-2.0-only"
+readme: "README.md"
+authors:
+  - "Joe OpenSrc"
+dependencies:
+  "community.general": ">=1.3.0"
+tags:
+  - vault
+  - hashicorp
+  - security
+  - system
+repository: "https://github.com/joe-opensrc/ansible-hashicorp-vault-role"
