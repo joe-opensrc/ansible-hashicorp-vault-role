@@ -1,0 +1,15 @@
+---
+
+- name: Packages¦ host lvl-dependencies
+  become: yes
+  register: zypper
+  community.general.zypper:
+    update_cache: yes
+    state: present
+    type: package
+    name:
+      - unzip
+
+- name: Report on zypper install
+  ansible.builtin.debug:
+    msg: "{{ zypper }}"
