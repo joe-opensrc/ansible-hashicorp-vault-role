@@ -1,18 +1,17 @@
 ---
 
-
-- name: FileDirs¦ make dirs)
+- name: FileDirs¦ make dirs
   become: yes
   ansible.builtin.file:
     state: directory
-    owner: root 
+    owner: root
     group: root
     path: "{{ item }}"
     mode: 0755
   loop:
-    - {{ vault_root_path }}
-    - {{ vault_download_path }}
-    - {{ vault_bin_path }}
+    - "{{ vault_root_path }}"
+    - "{{ vault_download_path }}"
+    - "{{ vault_bin_path }}"
 
 - name: Fetch¦ hashicorp vault binary
   become: yes
