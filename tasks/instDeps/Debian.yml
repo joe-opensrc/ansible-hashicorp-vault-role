@@ -1,0 +1,11 @@
+
+- name: Packages¦ install dependencies via package manager
+  register: apt_install
+  ansible.builtin.apt:
+    update_cache: yes
+    package:
+      - unzip
+
+- name: Output, show deb package name
+  ansible.builtin.debug:
+    msg: "{{ apt_install }}"
