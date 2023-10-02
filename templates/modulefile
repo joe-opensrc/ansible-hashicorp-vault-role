@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## module-info modulefile
+##
+proc ModulesHelp { } {
+    puts stderr "\tModule to enable {{ vault_modname }} "
+}
+
+module-whatis   "Module to enable {{ vault_modname }}"
+
+#proc InfoOut { } {}
+#if {![module-info mode whatis] && ![module-info mode scan]} {InfoOut}
+
+set version "{{ vault_version }}"
+set root "{{ vault_root_path }}"
+
+prepend-path PATH $root

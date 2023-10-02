@@ -1,0 +1,16 @@
+---
+
+- name: Stat¦ for modules install
+  register: modules_install
+  ansible.builtin.stat: "/opt/soft/modules"
+  
+- name: Template¦ render out modulefile
+  become: yes
+  ansible.builtin.template:
+    src:  "templates/modulefile"
+    dest: "{{ vault_root_modpath }}"
+    owner: root
+    group: root
+    mode: 0644
+  when:
+    modules_install.rc == 0
