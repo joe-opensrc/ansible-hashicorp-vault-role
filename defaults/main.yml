@@ -1,6 +1,5 @@
 ---
 # defaults file for hashicorp_vault
-
 vault_version: 1.15.0
 vault_root_path: /opt/soft/auth/hashicorp/vault
 vault_download_path: "{{ vault_root_path }}/downloads"
@@ -9,3 +8,6 @@ vault_zip_name: "vault_{{ vault_version }}_linux_amd64.zip"
 vault_bin_url: "https://releases.hashicorp.com/vault/{{ vault_version }}/{{ vault_zip_name }}"
 vault_bin_path: "{{ vault_root_path }}/{{ vault_version }}" 
 
+# tentative 
+vault_modname: "hasicorp vault"
+vault_root_modpath: "/opt/soft/modules/avails/auth/hashicorp/vault/{{ vault_version }}"
